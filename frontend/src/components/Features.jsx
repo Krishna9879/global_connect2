@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { CheckCircle, Globe, Users, Clock, X } from "lucide-react";
-import globalReachImage from '../assets/global_reach.jpg';
+import globalReachImage from '../assets/global_reach2.webp';
 import fastprocess from '../assets/fastProcsess.avif';
 import dedicatedTeam from '../assets/DedicatedTeam.avif';
 import student1 from '../assets/student1.webp';
@@ -26,7 +26,7 @@ const features = [
     description: "Access to immigration opportunities in 72 countries worldwide.",
     image: globalReachImage,
     detailedInfo:
-      "We’ve established partnerships with top universities and colleges across 72 countries, including the USA, Canada, UK, Australia, and Europe. Our extensive network allows us to recommend programs that align with your academic goals and career aspirations. Whether you’re aiming for a bachelor’s, master’s, or short-term exchange program, we’ve got you covered globally.",
+      "Weve established partnerships with top universities and colleges across 72 countries, including the USA, Canada, UK, Australia, and Europe. Our extensive network allows us to recommend programs that align with your academic goals and career aspirations. Whether you’re aiming for a bachelor’s, master’s, or short-term exchange program, we’ve got you covered globally.",
   },
   {
     icon: Users,
