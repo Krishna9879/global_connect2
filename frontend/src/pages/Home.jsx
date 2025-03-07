@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useSpring, animated } from '@react-spring/web';
 import { GraduationCap, Briefcase, Globe2, Trophy } from 'lucide-react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
@@ -50,21 +49,8 @@ const stats = [
   }
 ];
 
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.1
-];
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-
 const Hero = () => {
   const [index, setIndex] = React.useState(0);
-  const [props, set] = useSpring(() => ({
-    xys: [0, 0, 1],
-    config: { mass: 5, tension: 350, friction: 40 }
-  }));
-
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, 250]);
   const opacity = useTransform(scrollY, [0, 800], [1, 0.3]);
@@ -105,14 +91,7 @@ const Hero = () => {
         style={{ y, opacity }}
         className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-white"
       >
-        <animated.div
-          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-          onMouseLeave={() => set({ xys: [0, 0, 1] })}
-          style={{
-            transform: props.xys.to(trans)
-          }}
-          className="text-center"
-        >
+        <div className="text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -164,7 +143,7 @@ const Hero = () => {
               Explore Services
             </motion.button>
           </motion.div>
-        </animated.div>
+        </div>
       </motion.div>
 
       <motion.div
@@ -178,7 +157,6 @@ const Hero = () => {
         }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
-        
       </motion.div>
     </div>
   );
