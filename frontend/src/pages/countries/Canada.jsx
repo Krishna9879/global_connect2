@@ -6,6 +6,14 @@ import { PageHeader } from '../../components/PageHeader';
 import { ProcessSteps } from '../../components/ProcessSteps';
 import { FAQSection } from '../../components/FAQSection';
 import CountUp from 'react-countup';
+import canada1 from '../../assets/canada_images/canada1.webp';
+import canada2 from '../../assets/canada_images/canada2.webp';
+import canada3 from '../../assets/canada_images/canada3.avif';
+import canada4 from '../../assets/canada_images/canada4.avif';
+import canada5 from '../../assets/canada_images/canada5.webp';
+import canada6 from '../../assets/canada_images/canada6.avif';
+import head1 from "../../assets/canada_images/gh.avif";
+
 
 const Canada = () => {
   const [ref, inView] = useInView({
@@ -193,7 +201,7 @@ const Canada = () => {
             className="relative rounded-2xl overflow-hidden shadow-xl"
           >
             <img 
-              src="https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?auto=format&fit=crop&q=80" 
+              src={head1}
               alt="Toronto skyline" 
               className="w-full h-full object-cover"
             />
@@ -300,32 +308,32 @@ const Canada = () => {
               {
                 title: "World-Class Education",
                 description: "Globally recognized universities and colleges with affordable tuition for residents.",
-                image: "https://images.unsplash.com/photo-1580582932707-520aed4ade87?auto=format&fit=crop&q=80"
+                image: canada1
               },
               {
                 title: "Robust Economy",
                 description: "Strong job market with opportunities in tech, healthcare, and skilled trades.",
-                image: "https://images.unsplash.com/photo-1486325212027-6ea03e2b8039?auto=format&fit=crop&q=80"
+                image: canada2
               },
               {
                 title: "Universal Healthcare",
                 description: "Free healthcare for residents through a publicly funded system.",
-                image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80"
+                image: canada3
               },
               {
                 title: "Multicultural Society",
                 description: "One of the most diverse nations, welcoming immigrants from all backgrounds.",
-                image: "https://images.unsplash.com/photo-1517487881594-2787fef0ebf6?auto=format&fit=crop&q=80"
+                image: canada4
               },
               {
                 title: "Natural Beauty",
                 description: "Vast landscapes, from mountains and forests to lakes and coastlines.",
-                image: "https://images.unsplash.com/photo-1505831891887-2c7f8207bb88?auto=format&fit=crop&q=80"
+                image: canada5
               },
               {
                 title: "Pathway to Citizenship",
                 description: "Clear PR and citizenship routes after 3-5 years of residence.",
-                image: "https://images.unsplash.com/photo-1561336313-0bd5b5f2272e?auto=format&fit=crop&q=80"
+                image: canada6
               }
             ].map((item, index) => (
               <motion.div
