@@ -49,6 +49,19 @@ const stats = [
   }
 ];
 
+const flags = [
+  "https://flagcdn.com/us.svg",
+  "https://flagcdn.com/ca.svg",
+  "https://flagcdn.com/gb.svg",
+  "https://flagcdn.com/au.svg",
+  "https://flagcdn.com/de.svg",
+  "https://flagcdn.com/fr.svg",
+  "https://flagcdn.com/jp.svg",
+  "https://flagcdn.com/in.svg",
+  "https://flagcdn.com/br.svg",
+  "https://flagcdn.com/cn.svg"
+];
+
 const Hero = () => {
   const [index, setIndex] = React.useState(0);
   const { scrollY } = useScroll();
@@ -77,6 +90,31 @@ const Hero = () => {
             animate={{
               y: [0, window.innerHeight],
               opacity: [0.2, 0]
+            }}
+            transition={{
+              duration: Math.random() * 10 + 5,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {flags.map((flag, i) => (
+          <motion.img
+            key={i}
+            src={flag}
+            alt="Flag"
+            className="absolute w-16 h-12 opacity-50"
+            initial={{
+              x: Math.random() * window.innerWidth,
+              y: Math.random() * window.innerHeight,
+              rotate: Math.random() * 360
+            }}
+            animate={{
+              y: [0, window.innerHeight],
+              rotate: [0, 360]
             }}
             transition={{
               duration: Math.random() * 10 + 5,
