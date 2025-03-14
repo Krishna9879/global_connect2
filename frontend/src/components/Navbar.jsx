@@ -35,11 +35,6 @@ export const Navbar = () => {
         { name: 'UK', path: '/countries/uk' },
         { name: 'Australia', path: '/countries/australia' },
         { name: 'New Zealand', path: '/countries/new-zealand' },
-        { name: 'Switzerland', path: '/countries' },
-        { name: 'France', path: '/countries' },
-        { name: 'Russia', path: '/countries' },
-        { name: 'Dubai(UAE)', path: '/countries' },
-        { name: 'Singapore', path: '/countries' },
         { name: 'Germany', path: '/countries/germany' }
       ]
     },
